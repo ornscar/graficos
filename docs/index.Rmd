@@ -52,27 +52,6 @@ style_duo(
 )
 ```
 
-```{css, echo=FALSE}
-li::marker {
-  content: "⦿ ";
-  color: #C0392B;
-}
-
-li li::marker {
-  content: "• ";
-}
-
-li li li::marker {
-  content: "⚬ ";
-}
-
-pre {
-  max-height: 600px;
-  overflow-y: auto;
-  background-color: inherit;
-}
-```
-
 ---
 
 ### Cronograma
