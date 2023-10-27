@@ -1,4 +1,8 @@
 
+.partial-bg {
+  background-image: linear-gradient(90deg, #FFF5F4 50%, #C0392B 50%);
+}
+
 li::marker {
   content: "⦿ ";
   color: #C0392B;
