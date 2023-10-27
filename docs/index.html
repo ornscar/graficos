@@ -833,7 +833,7 @@ d_pnud |&gt;
   dplyr::group_by(ano, agregacao) |&gt; 
   dplyr::summarise(media_espvida = mean(espvida)) |&gt; 
   ggplot(aes(x = ano, y = media_espvida, color = agregacao)) +
-*   geom_line()
+*   geom_line(linewidth = 2)
 ```
 ] 
 
@@ -850,8 +850,8 @@ d_pnud |&gt;
   dplyr::group_by(ano, agregacao) |&gt; 
   dplyr::summarise(media_espvida = mean(espvida)) |&gt; 
   ggplot(aes(x = ano, y = media_espvida, color = agregacao)) +
-    geom_line() +
-*   geom_point()
+    geom_line(linewidth = 2) +
+*   geom_point(size = 5)
 ```
 ] 
 
@@ -868,8 +868,8 @@ d_pnud |&gt;
   dplyr::group_by(ano, agregacao) |&gt; 
   dplyr::summarise(media_espvida = mean(espvida)) |&gt; 
   ggplot(aes(x = ano, y = media_espvida, color = agregacao)) +
-    geom_line() +
-    geom_point() +
+    geom_line(linewidth = 2) +
+    geom_point(size = 5) +
 *   scale_x_continuous(breaks = seq(2012, 2021, 1))
 ```
 ] 
@@ -887,8 +887,8 @@ d_pnud |&gt;
   dplyr::group_by(ano, agregacao) |&gt; 
   dplyr::summarise(media_espvida = mean(espvida)) |&gt; 
   ggplot(aes(x = ano, y = media_espvida, color = agregacao)) +
-    geom_line() +
-    geom_point() +
+    geom_line(linewidth = 2) +
+    geom_point(size = 5) +
     scale_x_continuous(breaks = seq(2012, 2021, 1)) +
 *   theme_bw()
 ```
@@ -907,8 +907,8 @@ d_pnud |&gt;
   dplyr::group_by(ano, agregacao) |&gt; 
   dplyr::summarise(media_espvida = mean(espvida)) |&gt; 
   ggplot(aes(x = ano, y = media_espvida, color = agregacao)) +
-    geom_line() +
-    geom_point() +
+    geom_line(linewidth = 2) +
+    geom_point(size = 5) +
     scale_x_continuous(breaks = seq(2012, 2021, 1)) +
     theme_bw() +
 *   labs(
@@ -932,8 +932,8 @@ d_pnud |&gt;
   dplyr::group_by(ano, agregacao) |&gt; 
   dplyr::summarise(media_espvida = mean(espvida)) |&gt; 
   ggplot(aes(x = ano, y = media_espvida, color = agregacao)) +
-    geom_line() +
-    geom_point() +
+    geom_line(linewidth = 2) +
+    geom_point(size = 5) +
     scale_x_continuous(breaks = seq(2012, 2021, 1)) +
     theme_bw() +
     labs(
