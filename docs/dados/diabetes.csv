@@ -1,0 +1,409 @@
+ano,idade,cor,n_gestacoes,imc_classe,hb_glicada,glicemia_jejum,insulina
+2015,24,NA,1,até normal,normal,95,não
+2015,42,não branca,1,obeso,anormal,110,não
+2015,35,não branca,1,sobrepeso,anormal,114,sim
+2015,34,branca,1,obeso,anormal,92,não
+2015,42,branca,1,obeso,anormal,114,sim
+2015,41,não branca,1,sobrepeso,anormal,102,sim
+2015,41,não branca,1,até normal,anormal,96,não
+2015,37,branca,1,até normal,anormal,92,não
+2015,31,branca,1,obeso,anormal,92,não
+2015,39,branca,1,até normal,anormal,102,não
+2015,28,branca,1,obeso,normal,100,não
+2015,37,NA,1,obeso,normal,101,não
+2015,42,não branca,1,obeso,normal,92,não
+2015,37,não branca,1,sobrepeso,normal,94,não
+2015,36,branca,1,sobrepeso,normal,98,não
+2015,20,não branca,1,obeso,normal,106,não
+2015,34,branca,1,até normal,normal,95,não
+2015,34,branca,1,sobrepeso,normal,97,não
+2015,26,branca,1,até normal,normal,95,não
+2015,20,branca,1,obeso,normal,93,não
+2015,39,branca,1,até normal,normal,95,não
+2015,30,branca,1,obeso,normal,96,não
+2015,33,branca,1,obeso,normal,99,não
+2015,36,branca,3,obeso,normal,110,sim
+2015,36,branca,2,sobrepeso,normal,97,não
+2015,34,branca,2,obeso,normal,102,sim
+2015,24,branca,3,obeso,normal,94,não
+2015,34,branca,1,obeso,anormal,100,não
+2015,43,branca,1,obeso,anormal,99,não
+2015,37,branca,3,obeso,anormal,116,sim
+2015,23,branca,1,sobrepeso,anormal,98,não
+2015,28,não branca,3,obeso,anormal,99,não
+2015,37,não branca,3,obeso,anormal,104,não
+2015,38,não branca,4,até normal,anormal,106,não
+2015,35,branca,3,obeso,anormal,115,sim
+2015,45,branca,4,sobrepeso,anormal,107,sim
+2015,37,branca,4,obeso,anormal,98,sim
+2015,38,branca,4,obeso,anormal,93,sim
+2015,34,branca,6,sobrepeso,anormal,101,não
+2015,39,não branca,2,obeso,anormal,101,não
+2015,36,branca,3,até normal,anormal,103,não
+2015,39,branca,2,obeso,anormal,93,não
+2015,32,branca,3,até normal,anormal,112,sim
+2015,42,branca,2,sobrepeso,anormal,96,não
+2015,35,não branca,1,sobrepeso,anormal,94,não
+2015,36,branca,3,sobrepeso,anormal,93,sim
+2015,31,não branca,2,obeso,anormal,96,não
+2015,38,não branca,2,obeso,anormal,117,não
+2015,38,branca,3,sobrepeso,anormal,95,sim
+2015,42,branca,5,sobrepeso,anormal,98,não
+2015,39,branca,4,obeso,anormal,98,sim
+2015,36,branca,2,sobrepeso,anormal,92,não
+2015,34,branca,10,obeso,anormal,121,sim
+2015,37,branca,5,obeso,normal,97,não
+2015,30,branca,2,obeso,normal,108,não
+2015,39,branca,6,obeso,normal,94,sim
+2015,40,branca,6,sobrepeso,normal,94,não
+2015,33,branca,2,sobrepeso,normal,107,não
+2015,42,NA,3,sobrepeso,normal,93,não
+2015,33,não branca,3,obeso,normal,97,não
+2015,34,branca,3,obeso,normal,93,não
+2015,32,não branca,2,sobrepeso,normal,92,não
+2015,27,branca,3,sobrepeso,normal,100,não
+2015,39,branca,5,até normal,normal,97,não
+2015,46,branca,5,sobrepeso,normal,100,não
+2015,32,não branca,1,obeso,normal,95,não
+2015,41,branca,1,sobrepeso,normal,96,não
+2015,38,branca,3,obeso,normal,96,não
+2015,32,branca,3,obeso,normal,95,não
+2015,20,branca,1,até normal,normal,101,não
+2015,40,branca,3,sobrepeso,normal,95,não
+2015,31,branca,5,obeso,normal,101,não
+2015,32,branca,4,sobrepeso,normal,95,não
+2015,34,branca,4,obeso,normal,97,não
+2015,36,branca,2,sobrepeso,normal,92,não
+2015,28,branca,2,até normal,normal,92,não
+2015,29,branca,2,obeso,normal,97,não
+2015,30,branca,3,até normal,normal,94,não
+2015,35,não branca,4,obeso,normal,99,não
+2015,26,branca,2,sobrepeso,normal,96,não
+2015,28,branca,3,até normal,normal,95,não
+2015,23,branca,2,sobrepeso,normal,97,não
+2015,31,branca,5,obeso,normal,93,não
+2015,29,não branca,2,até normal,normal,94,não
+2015,37,branca,1,sobrepeso,normal,94,não
+2015,18,branca,1,obeso,normal,92,não
+2015,35,branca,2,obeso,normal,110,sim
+2015,37,branca,1,sobrepeso,normal,93,não
+2015,29,não branca,4,sobrepeso,normal,92,não
+2015,38,branca,5,sobrepeso,normal,97,sim
+2015,36,branca,4,até normal,normal,95,não
+2015,36,branca,2,obeso,normal,93,não
+2015,39,branca,5,obeso,normal,100,não
+2015,30,não branca,8,até normal,normal,93,não
+2015,31,branca,2,sobrepeso,normal,93,não
+2015,30,branca,3,obeso,normal,105,sim
+2015,30,branca,2,sobrepeso,normal,92,não
+2015,31,não branca,4,sobrepeso,normal,94,não
+2015,30,branca,6,sobrepeso,normal,92,não
+2014,34,não branca,1,obeso,anormal,124,sim
+2014,38,branca,1,sobrepeso,anormal,99,sim
+2014,37,branca,1,sobrepeso,anormal,96,sim
+2014,31,branca,1,obeso,anormal,94,não
+2014,42,branca,1,até normal,anormal,100,sim
+2014,20,não branca,1,sobrepeso,anormal,93,não
+2014,30,branca,1,obeso,anormal,96,não
+2014,32,branca,1,obeso,normal,100,não
+2014,29,não branca,1,obeso,normal,93,não
+2014,26,branca,1,obeso,normal,107,sim
+2014,27,não branca,1,até normal,normal,92,não
+2014,27,branca,1,até normal,normal,92,não
+2014,36,branca,1,até normal,normal,92,não
+2014,27,não branca,1,obeso,normal,99,não
+2014,33,branca,1,até normal,normal,92,não
+2014,32,branca,1,até normal,normal,104,não
+2014,28,branca,1,até normal,normal,93,não
+2014,25,não branca,1,até normal,normal,94,sim
+2014,23,não branca,1,obeso,normal,96,não
+2014,38,branca,1,sobrepeso,normal,95,não
+2014,19,branca,1,até normal,normal,93,não
+2014,24,branca,1,sobrepeso,normal,99,não
+2014,20,branca,1,até normal,normal,116,não
+2014,28,branca,1,até normal,normal,92,não
+2014,26,branca,1,até normal,normal,95,não
+2014,36,branca,3,até normal,normal,99,não
+2014,29,não branca,2,obeso,anormal,117,sim
+2014,38,não branca,7,obeso,anormal,92,não
+2014,37,não branca,6,obeso,anormal,106,sim
+2014,35,não branca,5,obeso,anormal,92,sim
+2014,30,branca,2,obeso,anormal,123,sim
+2014,38,não branca,2,obeso,anormal,97,não
+2014,40,branca,2,obeso,anormal,94,sim
+2014,39,não branca,4,obeso,anormal,105,sim
+2014,33,branca,2,obeso,anormal,102,não
+2014,39,branca,4,obeso,anormal,102,sim
+2014,33,não branca,5,obeso,anormal,107,sim
+2014,30,branca,2,sobrepeso,anormal,107,sim
+2014,36,não branca,2,obeso,anormal,98,sim
+2014,45,branca,2,sobrepeso,anormal,101,sim
+2014,34,branca,2,obeso,anormal,112,sim
+2014,28,branca,2,obeso,anormal,101,sim
+2014,34,branca,3,sobrepeso,anormal,96,não
+2014,32,branca,5,sobrepeso,anormal,96,sim
+2014,35,branca,3,obeso,anormal,93,não
+2014,33,branca,2,até normal,anormal,96,não
+2014,28,branca,3,obeso,normal,121,não
+2014,31,branca,5,obeso,normal,92,sim
+2014,30,branca,3,sobrepeso,normal,100,não
+2014,30,branca,2,obeso,normal,96,não
+2014,34,não branca,7,obeso,normal,96,não
+2014,42,branca,4,obeso,normal,103,sim
+2014,39,não branca,2,obeso,normal,95,não
+2014,34,branca,2,obeso,normal,95,não
+2014,35,branca,2,até normal,normal,95,não
+2014,32,não branca,3,obeso,normal,97,sim
+2014,36,branca,3,obeso,normal,94,não
+2014,34,branca,2,obeso,normal,94,não
+2014,36,branca,5,até normal,normal,99,não
+2014,31,branca,6,sobrepeso,normal,92,não
+2014,19,não branca,2,obeso,normal,93,não
+2014,31,branca,3,obeso,normal,92,sim
+2014,41,branca,6,sobrepeso,normal,97,não
+2014,32,branca,4,até normal,normal,93,não
+2014,30,branca,2,obeso,normal,113,sim
+2014,25,não branca,3,até normal,normal,92,não
+2014,40,branca,5,até normal,normal,94,não
+2014,20,não branca,3,sobrepeso,normal,92,não
+2014,23,branca,3,sobrepeso,normal,92,não
+2014,33,branca,2,obeso,normal,101,sim
+2014,32,não branca,6,até normal,normal,95,não
+2014,36,branca,3,obeso,normal,96,sim
+2014,28,branca,3,sobrepeso,normal,106,não
+2014,34,branca,2,obeso,normal,94,não
+2014,38,não branca,2,até normal,normal,92,não
+2014,36,branca,6,obeso,normal,95,não
+2014,40,branca,5,sobrepeso,normal,92,não
+2014,33,branca,6,até normal,normal,93,sim
+2014,34,não branca,3,sobrepeso,normal,95,não
+2014,25,branca,6,sobrepeso,normal,94,não
+2014,40,branca,3,sobrepeso,normal,110,sim
+2014,30,branca,5,sobrepeso,normal,98,sim
+2014,40,não branca,4,sobrepeso,normal,99,não
+2014,35,não branca,3,até normal,normal,100,não
+2014,39,não branca,6,obeso,normal,95,não
+2014,28,não branca,3,obeso,normal,95,não
+2014,36,não branca,3,obeso,normal,108,não
+2014,18,não branca,2,até normal,normal,109,não
+2014,40,branca,3,sobrepeso,normal,93,não
+2014,26,branca,2,obeso,normal,93,sim
+2014,26,branca,2,até normal,normal,100,não
+2014,28,não branca,2,sobrepeso,normal,93,não
+2014,43,branca,4,sobrepeso,normal,103,sim
+2013,31,branca,1,obeso,anormal,97,sim
+2013,36,não branca,1,obeso,anormal,92,não
+2013,41,branca,1,obeso,anormal,103,sim
+2013,27,não branca,1,sobrepeso,anormal,111,não
+2013,42,não branca,1,até normal,anormal,93,não
+2013,37,branca,1,obeso,normal,96,não
+2013,28,branca,1,obeso,normal,94,não
+2013,31,não branca,1,obeso,normal,93,não
+2013,19,não branca,1,até normal,normal,95,não
+2013,34,branca,1,sobrepeso,normal,97,sim
+2013,26,branca,1,obeso,normal,94,não
+2013,25,branca,1,obeso,normal,94,não
+2013,26,branca,1,sobrepeso,normal,94,não
+2013,18,não branca,1,até normal,normal,107,sim
+2013,24,branca,1,sobrepeso,normal,96,não
+2013,29,não branca,1,sobrepeso,normal,92,não
+2013,29,branca,1,obeso,normal,92,sim
+2013,31,branca,1,até normal,normal,98,não
+2013,38,branca,1,obeso,normal,96,não
+2013,18,não branca,1,sobrepeso,normal,102,não
+2013,25,não branca,1,obeso,normal,103,não
+2013,31,não branca,1,até normal,normal,92,sim
+2013,19,branca,1,sobrepeso,normal,95,não
+2013,26,não branca,1,até normal,normal,93,sim
+2013,26,não branca,1,sobrepeso,normal,99,não
+2013,29,branca,2,sobrepeso,anormal,92,não
+2013,43,não branca,6,até normal,anormal,98,sim
+2013,36,branca,3,obeso,anormal,102,sim
+2013,31,não branca,2,obeso,anormal,95,não
+2013,23,branca,2,obeso,anormal,96,não
+2013,38,não branca,2,obeso,anormal,120,sim
+2013,29,branca,5,obeso,anormal,94,sim
+2013,41,branca,3,sobrepeso,anormal,96,sim
+2013,26,branca,3,obeso,anormal,99,não
+2013,32,não branca,3,até normal,anormal,93,não
+2013,39,branca,2,sobrepeso,anormal,102,sim
+2013,42,não branca,4,obeso,anormal,108,sim
+2013,32,não branca,3,obeso,anormal,103,sim
+2013,36,branca,3,até normal,anormal,98,não
+2013,40,não branca,5,obeso,anormal,93,não
+2013,28,não branca,2,obeso,anormal,92,não
+2013,36,branca,4,sobrepeso,anormal,99,não
+2013,32,branca,2,obeso,anormal,100,sim
+2013,35,branca,4,obeso,normal,95,não
+2013,32,branca,3,obeso,normal,95,não
+2013,26,branca,5,obeso,normal,97,não
+2013,42,não branca,5,sobrepeso,normal,95,não
+2013,43,não branca,2,obeso,normal,103,sim
+2013,33,branca,3,obeso,normal,117,não
+2013,47,não branca,8,obeso,normal,101,sim
+2013,34,branca,3,sobrepeso,normal,95,sim
+2013,29,não branca,5,sobrepeso,normal,102,sim
+2013,30,branca,4,sobrepeso,normal,92,não
+2013,36,não branca,5,até normal,normal,93,não
+2013,34,branca,3,obeso,normal,100,não
+2013,36,branca,4,sobrepeso,normal,104,não
+2013,31,branca,2,sobrepeso,normal,93,sim
+2013,25,branca,2,até normal,normal,107,sim
+2013,39,não branca,2,até normal,normal,101,não
+2013,26,branca,4,obeso,normal,98,sim
+2013,30,não branca,4,obeso,normal,97,não
+2013,30,não branca,3,obeso,normal,99,sim
+2013,42,não branca,5,obeso,normal,92,não
+2013,41,não branca,7,obeso,normal,94,sim
+2013,35,não branca,4,até normal,normal,94,não
+2013,31,branca,7,obeso,normal,94,não
+2013,33,não branca,3,obeso,normal,100,sim
+2013,27,não branca,4,obeso,normal,95,sim
+2013,31,branca,4,obeso,normal,104,não
+2013,36,não branca,3,sobrepeso,normal,94,não
+2013,25,branca,3,sobrepeso,normal,99,não
+2013,38,branca,3,até normal,normal,93,não
+2013,28,não branca,2,até normal,normal,98,não
+2013,33,branca,4,até normal,normal,96,sim
+2013,37,não branca,5,obeso,normal,98,não
+2013,26,não branca,2,obeso,normal,95,não
+2013,40,branca,2,obeso,normal,99,não
+2013,34,branca,4,até normal,normal,99,sim
+2013,34,não branca,4,até normal,normal,99,não
+2013,34,branca,2,até normal,normal,97,não
+2013,28,branca,4,obeso,normal,117,não
+2013,39,não branca,5,obeso,normal,104,não
+2013,34,não branca,3,obeso,normal,92,não
+2013,26,não branca,3,obeso,normal,107,sim
+2013,33,não branca,4,sobrepeso,normal,98,sim
+2013,27,não branca,3,sobrepeso,normal,98,não
+2013,24,não branca,2,sobrepeso,normal,96,sim
+2013,34,branca,4,obeso,normal,92,não
+2013,36,branca,2,obeso,normal,92,não
+2013,35,branca,4,sobrepeso,normal,94,sim
+2013,29,não branca,7,até normal,normal,94,não
+2013,34,branca,2,obeso,normal,92,não
+2013,38,branca,4,até normal,normal,94,não
+2013,34,branca,4,sobrepeso,normal,95,não
+2013,33,branca,3,até normal,normal,94,sim
+2012,27,branca,1,sobrepeso,normal,95,não
+2012,38,branca,1,sobrepeso,normal,94,não
+2012,34,NA,1,obeso,normal,100,não
+2012,34,branca,1,obeso,normal,93,sim
+2012,28,não branca,1,obeso,anormal,119,não
+2012,32,não branca,1,sobrepeso,anormal,100,não
+2012,28,branca,1,obeso,anormal,98,não
+2012,25,não branca,1,obeso,anormal,114,sim
+2012,38,branca,1,até normal,anormal,97,sim
+2012,28,branca,1,obeso,anormal,103,sim
+2012,22,não branca,1,obeso,normal,92,sim
+2012,29,branca,1,obeso,normal,93,não
+2012,38,branca,1,sobrepeso,normal,92,não
+2012,29,não branca,1,sobrepeso,normal,97,não
+2012,39,não branca,1,sobrepeso,normal,95,sim
+2012,31,branca,1,até normal,normal,96,não
+2012,24,branca,1,sobrepeso,normal,104,não
+2012,28,branca,1,até normal,normal,100,não
+2012,34,não branca,1,obeso,normal,96,não
+2012,22,não branca,1,até normal,normal,108,sim
+2012,22,branca,1,até normal,normal,110,sim
+2012,29,não branca,1,até normal,normal,94,não
+2012,18,branca,1,sobrepeso,normal,96,não
+2012,37,não branca,1,sobrepeso,normal,98,não
+2012,18,não branca,1,até normal,normal,92,não
+2012,31,branca,4,sobrepeso,normal,95,não
+2012,39,branca,5,obeso,normal,92,não
+2012,28,branca,2,até normal,normal,99,não
+2012,34,não branca,3,obeso,normal,93,sim
+2012,40,branca,7,sobrepeso,anormal,116,sim
+2012,37,não branca,2,obeso,anormal,104,sim
+2012,35,branca,4,sobrepeso,anormal,92,sim
+2012,32,branca,3,sobrepeso,anormal,96,não
+2012,45,branca,4,obeso,anormal,99,sim
+2012,33,não branca,3,sobrepeso,anormal,113,sim
+2012,29,branca,2,obeso,anormal,93,sim
+2012,37,não branca,3,sobrepeso,anormal,109,não
+2012,37,não branca,3,sobrepeso,anormal,106,sim
+2012,36,branca,3,sobrepeso,anormal,95,não
+2012,31,branca,3,obeso,anormal,112,sim
+2012,36,não branca,7,obeso,anormal,101,sim
+2012,36,branca,3,obeso,anormal,92,sim
+2012,19,não branca,2,obeso,anormal,108,sim
+2012,40,não branca,5,sobrepeso,anormal,96,sim
+2012,38,não branca,3,obeso,anormal,100,sim
+2012,38,não branca,8,obeso,anormal,96,sim
+2012,19,branca,4,sobrepeso,anormal,95,não
+2012,36,não branca,2,obeso,anormal,92,sim
+2012,31,branca,9,sobrepeso,anormal,98,sim
+2012,34,não branca,2,obeso,anormal,101,sim
+2012,29,não branca,2,obeso,anormal,112,sim
+2012,40,não branca,5,obeso,anormal,93,sim
+2012,35,branca,3,sobrepeso,anormal,95,sim
+2012,31,não branca,4,até normal,anormal,92,não
+2012,40,não branca,3,obeso,anormal,106,sim
+2012,27,não branca,4,obeso,anormal,92,sim
+2012,30,branca,2,obeso,anormal,96,não
+2012,42,não branca,4,sobrepeso,anormal,105,sim
+2012,28,branca,2,sobrepeso,normal,102,não
+2012,32,não branca,2,obeso,normal,94,não
+2012,35,não branca,3,obeso,normal,93,não
+2012,39,não branca,2,obeso,normal,106,não
+2012,40,branca,5,obeso,normal,94,não
+2012,35,branca,3,obeso,normal,99,não
+2012,39,branca,3,sobrepeso,normal,94,não
+2012,32,branca,3,obeso,normal,92,sim
+2012,35,branca,4,obeso,normal,99,não
+2012,40,não branca,3,obeso,normal,93,sim
+2012,26,branca,3,obeso,normal,96,sim
+2012,36,branca,3,obeso,normal,92,não
+2012,33,branca,2,sobrepeso,normal,108,sim
+2012,25,não branca,4,obeso,normal,93,não
+2012,38,não branca,5,obeso,normal,100,não
+2012,34,branca,3,obeso,normal,97,não
+2012,28,branca,2,sobrepeso,normal,92,não
+2012,33,não branca,2,obeso,normal,95,sim
+2012,40,não branca,3,sobrepeso,normal,97,não
+2012,35,branca,5,obeso,normal,97,sim
+2012,35,branca,3,sobrepeso,normal,102,sim
+2012,37,não branca,4,sobrepeso,normal,93,não
+2012,24,não branca,3,obeso,normal,92,não
+2012,30,não branca,2,obeso,normal,97,não
+2012,34,não branca,4,obeso,normal,99,sim
+2012,41,não branca,6,sobrepeso,normal,102,sim
+2012,22,não branca,3,obeso,normal,102,sim
+2012,24,branca,2,sobrepeso,normal,92,não
+2012,30,branca,2,obeso,normal,92,não
+2012,29,não branca,3,obeso,normal,97,não
+2012,35,não branca,6,sobrepeso,normal,101,não
+2012,38,não branca,2,até normal,normal,101,não
+2012,41,não branca,2,sobrepeso,normal,92,não
+2012,26,não branca,4,até normal,normal,95,não
+2012,16,branca,2,sobrepeso,normal,96,não
+2012,37,branca,3,até normal,normal,102,não
+2012,20,branca,3,até normal,normal,93,não
+2012,34,branca,2,até normal,normal,94,sim
+2012,26,branca,3,até normal,normal,93,não
+2012,35,branca,2,obeso,normal,94,não
+2012,25,branca,2,até normal,normal,97,não
+2012,24,branca,2,sobrepeso,normal,119,não
+2012,40,branca,3,obeso,normal,95,sim
+2012,22,branca,3,sobrepeso,normal,93,não
+2012,38,branca,3,sobrepeso,normal,124,sim
+2012,37,não branca,2,até normal,normal,93,não
+2012,43,branca,2,sobrepeso,normal,92,não
+2012,42,não branca,4,sobrepeso,normal,96,não
+2012,36,branca,2,até normal,normal,93,não
+2012,35,não branca,7,obeso,normal,98,sim
+2012,28,não branca,2,sobrepeso,normal,99,sim
+2012,36,branca,4,obeso,normal,100,não
+2012,36,branca,9,sobrepeso,normal,100,sim
+2012,30,não branca,4,obeso,normal,105,não
+2012,27,branca,2,sobrepeso,normal,95,não
+2012,41,não branca,5,até normal,normal,95,não
+2012,40,não branca,6,até normal,normal,99,não
+2012,25,não branca,2,obeso,normal,104,não
+2012,35,não branca,2,até normal,normal,97,não
+2012,28,branca,3,até normal,normal,95,não
+2012,38,não branca,2,sobrepeso,normal,92,sim
+2012,31,branca,5,obeso,normal,98,sim
+2012,32,branca,2,obeso,normal,101,não
