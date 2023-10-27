@@ -5,7 +5,7 @@ output:
   xaringan::moon_reader:
     lib_dir: libs
     seal: false
-    css: xaringan-themer.css
+    css: [xaringan-themer.css, "custom_css.css"]
     nature:
       ratio: '16:9'
       highlightStyle: github
@@ -1648,7 +1648,7 @@ class: middle
 
 ### ... arte;
 
-```{r echo=FALSE, fig.align ='center', out.width="85%", fig.cap='Figura 5: Arte com R por Danielle Navarro (à direita) e Thomas Lin Pedersen (à esquerda).'}
+```{r echo=FALSE, fig.align ='center', out.width="85%", fig.cap='Figura 5: Arte com R por Danielle Navarro (à esquerda) e Thomas Lin Pedersen (à direita).'}
 knitr::include_graphics("img/arte.jpg")
 ```
 
