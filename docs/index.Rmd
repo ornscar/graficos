@@ -56,14 +56,16 @@ style_duo(
 class: middle, center, partial-bg
 
 .pull-left[
-<br><br><br><br><br>
-_Amo gráficos como amo cavalos. Gosto de música ruim e de cinema (bom). Sou apaixonada pelo Botafogo e pelo Bayern de Munique. Prefiro Vila Velha a qualquer lugar no mundo. Não tenho sonhos, mas um dia espero ver a Palestina livre._
-]
+### Sobre mim
 
-.pull-right[
 ```{r echo=FALSE, fig.align ='center', out.width="75%"}
 knitr::include_graphics("img/perfil.png")
 ```
+]
+
+.pull-right[
+<br><br><br><br><br><br><br>
+<font color="#FFF5F4"><em>Amo gráficos como amo cavalos. Gosto de música ruim e de cinema (bom). Sou apaixonada pelo Botafogo e pelo Bayern de Munique. Prefiro Vila Velha a qualquer lugar no mundo. Não tenho sonhos, mas um dia espero ver a Palestina livre.</font></em>
 ]
 
 ---
