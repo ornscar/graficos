@@ -132,6 +132,10 @@ class: middle, center, inverse
     - MAIS customizáveis;
     - sintaxe MAIS padronizada.
     
+- Documentação: [https://ggplot2.tidyverse.org/](https://ggplot2.tidyverse.org/).
+
+- Cheatsheet: [https://rstudio.github.io/cheatsheets/data-visualization.pdf](https://rstudio.github.io/cheatsheets/data-visualization.pdf).
+
 ---
 
 ### Os dados
