@@ -218,7 +218,7 @@ d_pnud |>
   dplyr::summarise(media_espvida = mean(espvida)) |> 
   ggplot(aes(x = ano, y = media_espvida, color = agregacao)) + #color: colore as linhas por agregacao
     # grafico de linhas
-    geom_line() +
+    geom_line(linewidth = 2) +
     # grafico de pontos
     geom_point() +
     # escala de 2012 a 2012 indo de 1 a 1
