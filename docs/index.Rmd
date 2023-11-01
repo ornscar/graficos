@@ -1617,7 +1617,7 @@ knitr::include_graphics("img/ridge.png")
 ```
 
 .center[
-<font size=3>Fonte: <a href="https://www.datanovia.com/en/blog/elegant-visualization-of-density-distribution-in-r-using-ridgeline/">Datanovia | Elegant Visualization of Density Distribution in R Using Ridgeline</a></font>.
+<font size=3>Fonte: <a href="https://www.datanovia.com/en/blog/elegant-visualization-of-density-distribution-in-r-using-ridgeline/">Datanovia | Elegant visualization of density distribution in R using ridgeline</a>.</font>
 ]
 
 ---
@@ -1639,7 +1639,20 @@ knitr::include_graphics("img/forest.png")
 ```
 
 .center[
-<font size=3>Fonte: <a href="https://www.andrewheiss.com/blog/2023/07/25/conjoint-bayesian-frequentist-guide/">Andrew Heiss | The ultimate practical guide to conjoint analysis with R</a></font>.
+<font size=3>Fonte: <a href="https://www.andrewheiss.com/blog/2023/07/25/conjoint-bayesian-frequentist-guide/">Andrew Heiss | The ultimate practical guide to conjoint analysis with R</a>.</font>
+]
+
+---
+class: middle
+
+### ... gráfico de radar (ou de aranha);
+
+```{r echo=FALSE, fig.align ='center', out.width="42%", fig.cap='Figura 5: Gráfico de radar das notas de alunos de um determinado colégio.'}
+knitr::include_graphics("img/radar.png")
+```
+
+.center[
+<font size=3>Fonte: <a href="https://www.datanovia.com/en/blog/beautiful-radar-chart-in-r-using-fmsb-and-ggplot-packages/">Datanovia | Beautiful radar chart in R using fmsb and ggplot packages</a>.</font>
 ]
 
 ---
@@ -1647,13 +1660,13 @@ class: middle
 
 ### ... arte;
 
-```{r echo=FALSE, fig.align ='center', out.width="85%", fig.cap='Figura 5: Arte com R por Danielle Navarro (à esquerda) e Thomas Lin Pedersen (à direita).'}
+```{r echo=FALSE, fig.align ='center', out.width="85%", fig.cap='Figura 6: Arte com R por Danielle Navarro (à esquerda) e Thomas Lin Pedersen (à direita).'}
 knitr::include_graphics("img/arte.jpg")
 ```
 
 <br><br>
 .center[
-<font size=3>Fonte: <a href="https://art.djnavarro.net/#pid=23">Art by Danielle Navarro</a> e <a href="https://www.data-imaginist.com/art">Data Imaginist - Visualization and beyond…</a></font>.
+<font size=3>Fonte: <a href="https://art.djnavarro.net/#pid=23">Art by Danielle Navarro</a> e <a href="https://www.data-imaginist.com/art">Data Imaginist - Visualization and beyond…</a>.</font>
 ]
 
 ---
@@ -1675,6 +1688,8 @@ class: middle, center, inverse
 
 - [Discourse da Curso-R](https://livro.curso-r.com/8-1-o-pacote-ggplot2.html).
 
+<br>
+
 ### Livros _on-line_
 
 - [Ciência de Dados em R](https://livro.curso-r.com);
@@ -1691,7 +1706,9 @@ class: middle, center, inverse
 
 - [The R Graph Gallery](https://r-graph-gallery.com);
 
-- [R Charts](https://r-charts.com).
+- [R Charts](https://r-charts.com);
+
+- [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/index.html).
 
 ### Posts
 
