@@ -59,7 +59,7 @@ class: middle, center, partial-bg
 
 - Apresentação de outros tipos de visualização de dados.
 
-- &lt;i&gt;&lt;font color="red"&gt;Obs.: apenas para aguçar! Não iremos entrar em detalhes nos códigos&lt;/i&gt;&lt;/font&gt; <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#333333;overflow:visible;position:relative;"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM174.6 384.1c-4.5 12.5-18.2 18.9-30.7 14.4s-18.9-18.2-14.4-30.7C146.9 319.4 198.9 288 256 288s109.1 31.4 126.6 79.9c4.5 12.5-2 26.2-14.4 30.7s-26.2-2-30.7-14.4C328.2 358.5 297.2 336 256 336s-72.2 22.5-81.4 48.1zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+&lt;i&gt;&lt;font color="red"&gt;Obs.: apenas para aguçar! Não iremos entrar em detalhes nos códigos&lt;/i&gt;&lt;/font&gt; <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#333333;overflow:visible;position:relative;"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM174.6 384.1c-4.5 12.5-18.2 18.9-30.7 14.4s-18.9-18.2-14.4-30.7C146.9 319.4 198.9 288 256 288s109.1 31.4 126.6 79.9c4.5 12.5-2 26.2-14.4 30.7s-26.2-2-30.7-14.4C328.2 358.5 297.2 336 256 336s-72.2 22.5-81.4 48.1zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
 ]
 
 .pull-right[
@@ -677,52 +677,6 @@ d_diab |&gt;
 .center[
 &lt;font size=3&gt;Para ver outras paletas R Color Brewer, &lt;a href="https://www.andrewheiss.com/blog/2023/07/25/conjoint-bayesian-frequentist-guide/"&gt;clique aqui&lt;/a&gt;!&lt;/font&gt;
 ]
-
----
-
-.pull-left[
-
-```r
-d_diab |&gt; 
-  dplyr::filter(!is.na(cor)) |&gt; 
-  ggplot(aes(x = cor, fill = insulina)) +
-    geom_bar(position = "fill") +
-    scale_y_continuous(labels = scales::percent) +
-    labs( 
-      x = "Raça/cor", 
-      y = "Frequência", 
-      fill = "Usou insulina?" 
-    ) +
-*   scale_fill_brewer(palette = "Accent") -&gt; g
-
-g_diab &lt;- g$data |&gt; 
-  dplyr::group_by(cor, insulina) |&gt;
-  dplyr::summarise(n = dplyr::n()) |&gt; 
-  dplyr::mutate(
-    prop = n / sum(n), 
-    rotulo = scales::percent(prop)
-  )
-
-g_diab |&gt; 
-  ggplot(aes(x = cor, y = prop, fill = insulina)) +
-*   geom_bar(stat = "identity", position = "fill") +
-    scale_y_continuous(labels = scales::percent) +
-    labs( 
-      x = "Raça/cor", 
-      y = "Frequência", 
-      fill = "Usou insulina?" 
-    ) +
-    scale_fill_brewer(palette = "Accent") +
-*   geom_text(
-*     aes(label = rotulo), size = 3,
-*     position = position_stack(vjust = .5)
-*   )
-```
-] 
-
-.pull-right[
-![](index_files/figure-html/g50-out-1.png)&lt;!-- --&gt;
-] 
 
 ---
 
@@ -1509,7 +1463,7 @@ d_diab |&gt;
   labs( 
     x = "IMC categórico", 
     y = "Média do valor do exame de glicemia de jejum (em mg/dL)", 
-    fill = "Usou insulina?" 
+    color = "Usou insulina?" 
   ) +
 * theme_bw()
 ```

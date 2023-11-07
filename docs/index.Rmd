@@ -87,7 +87,7 @@ knitr::include_graphics("img/perfil.png")
 
 - Apresentação de outros tipos de visualização de dados.
 
-- <i><font color="red">Obs.: apenas para aguçar! Não iremos entrar em detalhes nos códigos</i></font> `r fontawesome::fa("face-frown", fill = "#333333")`
+<i><font color="red">Obs.: apenas para aguçar! Não iremos entrar em detalhes nos códigos</i></font> `r fontawesome::fa("face-frown", fill = "#333333")`
 ]
 
 .pull-right[
@@ -680,52 +680,6 @@ d_diab |>
 .center[
 <font size=3>Para ver outras paletas R Color Brewer, <a href="https://www.andrewheiss.com/blog/2023/07/25/conjoint-bayesian-frequentist-guide/">clique aqui</a>!</font>
 ]
-
----
-
-.pull-left[
-```{r g50, paged.print=FALSE, eval=FALSE, message=FALSE}
-d_diab |> 
-  dplyr::filter(!is.na(cor)) |> 
-  ggplot(aes(x = cor, fill = insulina)) +
-    geom_bar(position = "fill") +
-    scale_y_continuous(labels = scales::percent) +
-    labs( 
-      x = "Raça/cor", 
-      y = "Frequência", 
-      fill = "Usou insulina?" 
-    ) +
-    scale_fill_brewer(palette = "Accent") -> g#<< 
-
-g_diab <- g$data |> 
-  dplyr::group_by(cor, insulina) |>
-  dplyr::summarise(n = dplyr::n()) |> 
-  dplyr::mutate(
-    prop = n / sum(n), 
-    rotulo = scales::percent(prop)
-  )
-
-g_diab |> 
-  ggplot(aes(x = cor, y = prop, fill = insulina)) +
-    geom_bar(stat = "identity", position = "fill") + #<<
-    scale_y_continuous(labels = scales::percent) +
-    labs( 
-      x = "Raça/cor", 
-      y = "Frequência", 
-      fill = "Usou insulina?" 
-    ) +
-    scale_fill_brewer(palette = "Accent") +
-    geom_text( #<<
-      aes(label = rotulo), size = 3, #<<
-      position = position_stack(vjust = .5) #<<
-    ) #<<
-``` 
-] 
-
-.pull-right[
-```{r g50-out, ref.label="g50", echo=FALSE, message=FALSE}
-```
-] 
 
 ---
 
@@ -1511,7 +1465,7 @@ d_diab |>
   labs( 
     x = "IMC categórico", 
     y = "Média do valor do exame de glicemia de jejum (em mg/dL)", 
-    fill = "Usou insulina?" 
+    color = "Usou insulina?" 
   ) +
   theme_bw() #<<
 ``` 
