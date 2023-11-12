@@ -1554,6 +1554,140 @@ ggsave("graficos/univariados.png", width = 16, height = 10)
 ---
 class: middle, center, inverse
 
+## Extra
+
+---
+
+#### Mapa geográfico
+
+- 1° passo: carregar os dados.
+
+
+```r
+# carregando os dados
+
+*d_pnud_uf &lt;- readr::read_csv("dados/pnud_geobr.csv", show_col_types = FALSE)
+
+# panorama da base de dados
+
+dplyr::glimpse(d_pnud_uf)
+```
+
+```
+## Rows: 27
+## Columns: 4
+## $ ano     &lt;dbl&gt; 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 20…
+## $ cod_uf  &lt;dbl&gt; 11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24, 25, 26, 27, 28, 29…
+## $ nome_uf &lt;chr&gt; "Rondônia", "Acre", "Amazonas", "Roraima", "Pará", "Amapá", "T…
+## $ espvida &lt;dbl&gt; 71.20, 74.47, 71.99, 72.00, 72.02, 73.91, 74.02, 70.45, 71.06,…
+```
+
+---
+
+- 2° passo: obter o objeto de dados que contém aspectos geográficos. Pacote `{geobr}`!
+
+
+```r
+library(geobr)
+```
+
+```
+## Loading required namespace: sf
+```
+
+```r
+# dados sobre todas as uf do brasil, do ano de 2020
+
+*inf_uf_br &lt;- read_state(code_state = "all", year = 2020, showProgress = FALSE) |&gt;
+  dplyr::rename(cod_uf = code_state)
+```
+
+```
+## Using year 2020
+```
+
+```r
+# panorama da base de dados
+
+dplyr::glimpse(inf_uf_br)
+```
+
+```
+## Rows: 27
+## Columns: 6
+## $ cod_uf       &lt;dbl&gt; 11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24, 25, 26, 27, 2…
+## $ abbrev_state &lt;chr&gt; "RO", "AC", "AM", "RR", "PA", "AP", "TO", "MA", "PI", "CE…
+## $ name_state   &lt;chr&gt; "Rondônia", "Acre", "Amazônas", "Roraima", "Pará", "Amapá…
+## $ code_region  &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, …
+## $ name_region  &lt;chr&gt; "Norte", "Norte", "Norte", "Norte", "Norte", "Norte", "No…
+## $ geom         &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-65.3815 -1..., MULTIPOLYGON…
+```
+
+---
+
+- 3° passo: unir a base do PNUD à base gerada pelo `{geobr}`.
+
+
+```r
+d_pnud_geobr &lt;- inf_uf_br |&gt; 
+* dplyr::left_join(d_pnud_uf, by = "cod_uf")
+
+# panorama da base de dados
+
+dplyr::glimpse(d_pnud_geobr)
+```
+
+```
+## Rows: 27
+## Columns: 9
+## $ cod_uf       &lt;dbl&gt; 11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24, 25, 26, 27, 2…
+## $ abbrev_state &lt;chr&gt; "RO", "AC", "AM", "RR", "PA", "AP", "TO", "MA", "PI", "CE…
+## $ name_state   &lt;chr&gt; "Rondônia", "Acre", "Amazônas", "Roraima", "Pará", "Amapá…
+## $ code_region  &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, …
+## $ name_region  &lt;chr&gt; "Norte", "Norte", "Norte", "Norte", "Norte", "Norte", "No…
+## $ ano          &lt;dbl&gt; 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 202…
+## $ nome_uf      &lt;chr&gt; "Rondônia", "Acre", "Amazonas", "Roraima", "Pará", "Amapá…
+## $ espvida      &lt;dbl&gt; 71.20, 74.47, 71.99, 72.00, 72.02, 73.91, 74.02, 70.45, 7…
+## $ geom         &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-65.3815 -1..., MULTIPOLYGON…
+```
+
+```r
+# classe do objeto de dados
+
+class(d_pnud_geobr)
+```
+
+```
+## [1] "sf"         "data.frame"
+```
+
+---
+
+- 4° passo: criar mapa geográfico.
+
+.pull-left[
+
+```r
+ggplot(d_pnud_geobr, aes(fill = espvida)) + 
+* geom_sf() +
+  scale_fill_viridis_c(option = "mako") +
+  labs(
+    title = "Expectativa de vida no Brasil em 2020",
+    caption = "Fonte: PNUD, 4 de outubro de 2021.",
+    fill = "Expectativa \nde vida"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+] 
+
+.pull-right[
+![](index_files/figure-html/g69-out-1.png)&lt;!-- --&gt;
+]
+
+---
+class: middle, center, inverse
+
 ## Outras representações gráficas
 
 #### No R, é possível fazer...
@@ -1618,6 +1752,20 @@ class: middle
 
 .center[
 &lt;font size=3&gt;Fonte: &lt;a href="https://www.datanovia.com/en/blog/beautiful-radar-chart-in-r-using-fmsb-and-ggplot-packages/"&gt;Datanovia | Beautiful radar chart in R using fmsb and ggplot packages&lt;/a&gt;.&lt;/font&gt;
+]
+
+---
+class: middle
+
+### ... gráfico de vulcão;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/volcano.png" alt="Figura 6: Gráfico de vulcão para dados de nível de expressão gênica detectada em tecido doente e tecido saudável." width="60%" /&gt;
+&lt;p class="caption"&gt;Figura 6: Gráfico de vulcão para dados de nível de expressão gênica detectada em tecido doente e tecido saudável.&lt;/p&gt;
+&lt;/div&gt;
+
+.center[
+&lt;font size=3&gt;Fonte: &lt;a href="https://erikaduan.github.io/posts/2021-01-02-volcano-plots-with-ggplot2/"&gt;Erika Duan | Volcano plots with ggplot2&lt;/a&gt;.&lt;/font&gt;
 ]
 
 ---

@@ -1548,6 +1548,85 @@ ggsave("graficos/univariados.png", width = 16, height = 10)
 ---
 class: middle, center, inverse
 
+## Extra
+
+---
+
+#### Mapa geográfico
+
+- 1° passo: carregar os dados.
+
+```{r}
+# carregando os dados
+
+d_pnud_uf <- readr::read_csv("dados/pnud_geobr.csv", show_col_types = FALSE) #<<
+
+# panorama da base de dados
+
+dplyr::glimpse(d_pnud_uf)
+```
+
+---
+
+- 2° passo: obter o objeto de dados que contém aspectos geográficos. Pacote `{geobr}`!
+
+```{r}
+library(geobr)
+
+# dados sobre todas as uf do brasil, do ano de 2020
+
+inf_uf_br <- read_state(code_state = "all", year = 2020, showProgress = FALSE) |> #<<
+  dplyr::rename(cod_uf = code_state)
+
+# panorama da base de dados
+
+dplyr::glimpse(inf_uf_br)
+```
+
+---
+
+- 3° passo: unir a base do PNUD à base gerada pelo `{geobr}`.
+
+```{r}
+d_pnud_geobr <- inf_uf_br |> 
+  dplyr::left_join(d_pnud_uf, by = "cod_uf") #<<
+
+# panorama da base de dados
+
+dplyr::glimpse(d_pnud_geobr)
+
+# classe do objeto de dados
+
+class(d_pnud_geobr)
+```
+
+---
+
+- 4° passo: criar mapa geográfico.
+
+.pull-left[
+```{r g69, paged.print=FALSE, eval=FALSE}
+ggplot(d_pnud_geobr, aes(fill = espvida)) + 
+  geom_sf() + #<<
+  scale_fill_viridis_c(option = "mako") +
+  labs(
+    title = "Expectativa de vida no Brasil em 2020",
+    caption = "Fonte: PNUD, 4 de outubro de 2021.",
+    fill = "Expectativa \nde vida"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+``` 
+] 
+
+.pull-right[
+```{r g69-out, ref.label="g69", echo=FALSE, message=FALSE}
+```
+]
+
+---
+class: middle, center, inverse
+
 ## Outras representações gráficas
 
 #### No R, é possível fazer...
@@ -1607,6 +1686,19 @@ knitr::include_graphics("img/radar.png")
 
 .center[
 <font size=3>Fonte: <a href="https://www.datanovia.com/en/blog/beautiful-radar-chart-in-r-using-fmsb-and-ggplot-packages/">Datanovia | Beautiful radar chart in R using fmsb and ggplot packages</a>.</font>
+]
+
+---
+class: middle
+
+### ... gráfico de vulcão;
+
+```{r echo=FALSE, fig.align ='center', out.width="60%", fig.cap='Figura 6: Gráfico de vulcão para dados de nível de expressão gênica detectada em tecido doente e tecido saudável.'}
+knitr::include_graphics("img/volcano.png")
+```
+
+.center[
+<font size=3>Fonte: <a href="https://erikaduan.github.io/posts/2021-01-02-volcano-plots-with-ggplot2/">Erika Duan | Volcano plots with ggplot2</a>.</font>
 ]
 
 ---
