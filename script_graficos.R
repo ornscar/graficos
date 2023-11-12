@@ -3,65 +3,25 @@
 
 #dados
 library(dplyr)
-library(forcats)
 #graficos
-library(ggplot2)
 library(scales)
-library(ggpubr)
+library(ggplot2)
 library(patchwork)
+#
 
 
 # dados -------------------------------------------------------------------
 
 # diabetes gestacional
-d_diab <- readr::read_csv("docs/dados/diabetes.csv")
+d_diab <- readr::read_csv("dados/diabetes.csv")
 
 # pnud
-d_pnud <- readxl::read_excel("docs/dados/pnud.xlsx") 
+d_pnud <- readxl::read_excel("dados/pnud.xlsx") 
 
 
 # graficos univariados ----------------------------------------------------
 
 # barras
-
-ggplot(d_diab, aes(x = imc_classe, y = after_stat(count))) +
-  # grafico de barras
-  geom_bar(color = "blue", fill = "white") +
-  # adiciona rotulos em cima das barras
-  geom_text(
-    stat = "count", 
-    aes(label = round(after_stat(count)/sum(after_stat(count)), 1) * 100,
-        vjust = -1)
-  ) +
-  # nomes do titulo e eixos x e y 
-  labs(
-    title = "Frequência do IMC categórico das gestantes",
-    x = "IMC categórico", 
-    y = "Frequência" 
-  )
-
-# barras ordenadas em ordem decrescente
-
-d_diab |> 
-  # agrupa os dados por imc
-  group_by(imc_classe) |> 
-  # conta numero de casos por categoria de imc
-  summarise(n = n()) |> 
-  # reordena as frequencias de imc em ordem decrescente
-  mutate(imc = forcats::fct_reorder(imc_classe, dplyr::desc(n))) |> 
-  ggplot(aes(x = imc, y = n), fill = imc) +
-  # grafico de barras
-    geom_bar(stat = "identity", color = "blue", fill = "white") +
-    # adiciona rotulos em cima das barras
-    geom_text(aes(label = n, vjust = -1)) +
-    # nomes do titulo e eixos x e y 
-    labs(
-      title = "Frequência do IMC categórico das gestantes",
-      x = "IMC categórico", 
-      y = "Frequência" 
-    )
-
-# barras com percentuais
 
 ggplot(d_diab, aes(x = imc_classe, y = after_stat(count)/sum(after_stat(count)))) +
   # grafico de barras
@@ -139,10 +99,8 @@ d_diab |>
 # barras empilhadas (com rotulos)
 
 d_diab |> 
-  # filtra somente casos validos (diferentes de NA)
   dplyr::filter(!is.na(cor)) |> 
   ggplot(aes(x = cor, fill = insulina)) +
-  # grafico de barras
   geom_bar(position = "fill") +
   scale_y_continuous(labels = scales::percent) +
   labs( 
@@ -152,7 +110,7 @@ d_diab |>
   ) +
   scale_fill_brewer(palette = "Accent") -> g #salva grafico num objeto 'g'
 
-g_diab <- g$data |> #acessa os dados (data frame)
+g_diab <- g$data |> #acessa os dados
   # agrupa os dados por raca/cor e grupo de insulina
   dplyr::group_by(cor, insulina) |>
   # conta quantos casos de insulina 'sim' e 'nao' tem em cada categoria de raca/cor 
@@ -202,10 +160,6 @@ ggplot(d_diab, aes(x = idade, y = glicemia_jejum)) +
     y = "Valor do exame de glicemia de jejum (em mg/dL)" 
   )
 
-# dispersao (com funcao base do R plot())
-
-plot(d_diab$idade, d_diab$glicemia_jejum)
-
 
 # graficos bivariados - qualitativas x quantitativas ----------------------
 
@@ -218,7 +172,7 @@ d_pnud |>
   dplyr::summarise(media_espvida = mean(espvida)) |> 
   ggplot(aes(x = ano, y = media_espvida, color = agregacao)) + #color: colore as linhas por agregacao
     # grafico de linhas
-    geom_line(linewidth = 2) +
+    geom_line() +
     # grafico de pontos
     geom_point() +
     # escala de 2012 a 2012 indo de 1 a 1
@@ -385,5 +339,40 @@ g1 + g2
 # salva grafico -----------------------------------------------------------
 
 ggsave("graficos/univariados.png", width = 16, height = 10)
+
+
+# extra -------------------------------------------------------------------
+
+# carregando dados do pnud
+
+d_pnud_uf <- readr::read_csv("pnud_geobr.csv")
+
+# carregando dados de aspectos geograficos pelo {geobr}
+
+inf_uf_br <- read_state(code_state = "all", year = 2020) |> 
+  rename(cod_uf = code_state)
+
+# unindo bases do {geobr} e pnud
+
+d_pnud_geobr <- cod_uf_br |> 
+  left_join(d_pnud_uf, by = "cod_uf")
+
+# mapa geografico
+
+ggplot(d_pnud_geobr) +
+  # mapa geografico
+  geom_sf(aes(fill = espvida)) +
+  # preenche com escala de cores viridis
+  scale_fill_viridis_c(option = "mako") +
+  # inclui nomes de titulo, legenda da imagem e legenda
+  labs(
+    title = "Expectativa de vida no Brasil em 2020",
+    caption = "Fonte: PNUD, 4 de outubro de 2021.",
+    fill = "Expectativa \nde vida"
+  ) +
+  # tema (background do grafico)
+  theme_minimal() +
+  # legenda embaixo do grafico
+  theme(legend.position = "bottom")
 
 
